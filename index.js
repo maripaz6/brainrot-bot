@@ -52,7 +52,7 @@ client.on('interactionCreate', async interaction => {
 
 client.on('messageCreate', async msg => {
     if (msg.author.bot) return false;
-    if (Math.random() * 100 < 20) return false;
+    if (Math.random() * 100 >= 20) return false;
     isNitro = msg.content.toLowerCase().match('nitro');
     isCoffee = msg.content.toLowerCase().match('nitro cold brew');
     nitro_responses = [
