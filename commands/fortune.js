@@ -30,6 +30,14 @@ const possibleFortunes = [
     "Every journey has its final day. Don't rush.",
     "any world without you is false",
     "Until he can be okay on his own... I can't die.",
+    "A disciplined mind brings happiness",
+    "The root of suffering is attachment",
+    "Just as a solid rock is not shaken by the storm, even so the wise are not affected by praise or blame",
+    "One who conquers themself is greater than another who conquers a thousand times a thousand men on the battlefield.",
+    "You cannot travel the path until you have become the path itself.",
+    "They who knows all the answers has not been asked all the questions",
+    "Before you embark on a journey of revenge, dig two graves.",
+    "It is more shameful to distrust our friends than to be deceived by them."
 ];
 
 // in certain cases, add the following 

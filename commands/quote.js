@@ -20,7 +20,7 @@ const quotes = [
     "Ge... we don't have a shizun anymore.",
     "We are the heirs to the throne of love! Battle Lovers!",
     "Go somewhere that will welcome you... this time no matter where you want to go, this master will accompany you.",
-    "Only after having met you did I rediscover that it’s such a simple thing to be happy",
+    "Only after having met you did I rediscover that it's such a simple thing to be happy",
     "Your Highness I understand your everything. Your courage, your dispair; your kindness, your pain; your resentment, your hate; your intelligence, your foolishness",
     "GAINS OVER SHAME. MONEY OVER LIFE. HA HA HA.",
     "Body in abyss, heart in paradise.",
@@ -41,7 +41,20 @@ const quotes = [
     "Fear is not evil. It tells you what weakness is. And once you know your weakness, you can become stronger as well as kinder.",
     "Come on, let's get moving. We're not frozen in place, after all.",
     "Once you've all witnessed the wrath of the spiked butt...",
-    "Hell is too cold, I came to die with you."
+    "Hell is too cold, I came to die with you.",
+    "Another day in the life of Eorzea's errand boy",
+    "i am one hell of a butler",
+    "We have two lives, and the second begins when we realize we only have one.",
+    "Hell is empty and all the devils are here ~ Shakespeare",
+    "Ahes to ashes, dust to dust, oil them bones, before they rust.",
+    "To die in battle for you is my greatest honour",
+    "If your dream is to save the common people, then my dream is only you",
+    "There is no banquet in this world that doesn't come to an end.",
+    "I pray to never rest in peace.",
+    "Remember: when humans ascend, they are still human; when they fall, they are still human",
+    "I don't know if you all missed me, but I haven't thought about any of you at all.",
+    "I might not be able to decide whether the road is easy or not, but whether I walk it is entirely up to me",
+
 ];
 
 module.exports = {
