@@ -99,7 +99,7 @@ client.on('messageCreate', async msg => {
 client.on('messageCreate', async msg => {
     if (msg.author.bot) return false;
     if (Math.random() * 100 >= 20) return false;
-    let regex = /(steal|rob|stole)/;
+    let regex = /(steal| rob |stole|murder)/;
     const isSwiper = regex.test(msg.content.toLowerCase());
     if (isSwiper) {
         return msg.reply("Swiper no swiping!");
