@@ -83,7 +83,7 @@ client.on('messageCreate', async msg => {
 
 client.on('messageCreate', async msg => {
     if (msg.author.bot) return false;
-    if (Math.random() * 100 >= 20) return false;
+    if (Math.random() * 100 >= 10) return false;
     isNitro = msg.content.toLowerCase().match('nitro');
     isCoffee = msg.content.toLowerCase().match('nitro cold brew');
     nitro_responses = [
@@ -101,7 +101,7 @@ client.on('messageCreate', async msg => {
 
 client.on('messageCreate', async msg => {
     if (msg.author.bot) return false;
-    if (Math.random() * 100 >= 20) return false;
+    if (Math.random() * 100 >= 10) return false;
     let regex = /(crime|guacamole|avocado)/;
     const isAvocado = regex.test(msg.content.toLowerCase());
     if (isAvocado) {
@@ -111,7 +111,7 @@ client.on('messageCreate', async msg => {
 
 client.on('messageCreate', async msg => {
     if (msg.author.bot) return false;
-    if (Math.random() * 100 >= 20) return false;
+    if (Math.random() * 100 >= 10) return false;
     let regex = /(steal| rob |stole|murder)/;
     const isSwiper = regex.test(msg.content.toLowerCase());
     if (isSwiper) {
@@ -121,7 +121,7 @@ client.on('messageCreate', async msg => {
 
 client.on('messageCreate', async msg => {
     if (msg.author.bot) return false;
-    if (Math.random() * 100 >= 20) return false;
+    if (Math.random() * 100 >= 10) return false;
 
     let regex = /(poor|classism|rich|broke)/;
 
@@ -143,11 +143,9 @@ client.on('messageCreate', async msg => {
     if (msg.author.bot) return false;
     if (Math.random() * 100 >= 5) return false;
     let regex = /(conscience|overthinking)/;
-    
     responses = [
         "conscience doth make a coward of us all",
     ];
-    
     if (regex.test(msg.content.toLowerCase())) {
         return msg.reply(responses[Math.floor(Math.random() * responses.length)]);
     }
