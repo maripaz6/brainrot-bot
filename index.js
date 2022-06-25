@@ -68,4 +68,24 @@ client.on('messageCreate', async msg => {
     }
 });
 
+client.on('messageCreate', async msg => {
+    if (msg.author.bot) return false;
+    if (Math.random() * 100 >= 20) return false;
+    let regex = /(crime|guacamole|avocado)/;
+    const isAvocado = regex.test(msg.content.toLowerCase());
+    if (isAvocado) {
+        return msg.reply("The avocado cartel wants to know your location.");
+    }
+});
+
+client.on('messageCreate', async msg => {
+    if (msg.author.bot) return false;
+    if (Math.random() * 100 >= 20) return false;
+    let regex = /(steal|rob|stole)/;
+    const isSwiper = regex.test(msg.content.toLowerCase());
+    if (isSwiper) {
+        return msg.reply("Swiper no swiping!");
+    }
+});
+
 client.login(token);
