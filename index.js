@@ -118,4 +118,20 @@ client.on('messageCreate', async msg => {
     }
 });
 
+client.on('messageCreate', async msg => {
+    if (msg.author.bot) return false;
+    if (Math.random() * 100 >= 20) return false;
+
+    let regex = /(poor|classism|rich|broke)/;
+    
+    responses = [
+        "overthrow the bourgeoisie",
+ 
+    ];
+    
+    if (regex.test(msg.content.toLowerCase())) {
+        return msg.reply(responses[Math.floor(Math.random() * responses.length)]);
+    }
+});
+
 client.login(token);
