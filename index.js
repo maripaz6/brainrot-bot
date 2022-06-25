@@ -50,6 +50,24 @@ client.on('interactionCreate', async interaction => {
 
 // ------------------ events section --------------------------- //
 
+/* EXAMPLE FORMAT (replace TRIGGER_WORD & RESPONSE with your stuff :D)
+
+client.on('messageCreate', async msg => {
+    if (msg.author.bot) return false;
+    if (Math.random() * 100 >= 20) return false;
+
+    let regex = /(TRIGGER_WORD1|TRIGGER_WORD2|TRIGGER_WORD3)/;
+    const isTrigger = regex.test(msg.content.toLowerCase());
+    responses = [
+        "RESPONSE1",
+        "RESPONSE2"
+    ];
+    if (isTrigger) {
+        return msg.reply(responses[Math.floor(Math.random() * responses.length)]);
+    }
+});
+*/
+
 client.on('messageCreate', async msg => {
     if (msg.author.bot) return false;
     if (Math.random() * 100 >= 20) return false;
