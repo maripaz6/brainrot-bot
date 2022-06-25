@@ -55,6 +55,7 @@ client.on('interactionCreate', async interaction => {
 ( the words should have colors like the nitro example :)
 2. Replace all TRIGGER_WORD with your own triggers (ex. nitro)
 3. Replace RESPONSE with how the bot responds (ex. "a waste of money")
+4. To save, click the 'propose changes' at the bottom. Then hit the green 'Pull Request' button up top.
 
 client.on('messageCreate', async msg => {
     if (msg.author.bot) return false;
