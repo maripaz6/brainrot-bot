@@ -50,19 +50,31 @@ client.on('interactionCreate', async interaction => {
 
 // ------------------ events section --------------------------- //
 
-/* EXAMPLE FORMAT (replace TRIGGER_WORD & RESPONSE with your stuff :D)
+/* EXAMPLE FORMAT
+1. Copy the block of code & move it out of the comment
+( the words should have colors like the nitro example :)
+2. Replace all TRIGGER_WORD with your own triggers (ex. nitro)
+3. Replace RESPONSE with how the bot responds (ex. "a waste of money")
 
 client.on('messageCreate', async msg => {
     if (msg.author.bot) return false;
     if (Math.random() * 100 >= 20) return false;
 
     let regex = /(TRIGGER_WORD1|TRIGGER_WORD2|TRIGGER_WORD3)/;
-    const isTrigger = regex.test(msg.content.toLowerCase());
+    // if you have more than 3 triggers, keep adding | symbols between them
+    // if you have less than 3 triggers, delete the extra TRIGGER_WORDX and | left over.
+    // do NOT use quotes ('' or "")
+    
     responses = [
         "RESPONSE1",
         "RESPONSE2"
     ];
-    if (isTrigger) {
+    // if you have more than 2 responses, keep adding with , in between them
+    // if you have one response, no need for a comma
+    // make sure you use the quotation marks around these phrases!
+    // make sure you use "" and not ''
+    
+    if (regex.test(msg.content.toLowerCase())) {
         return msg.reply(responses[Math.floor(Math.random() * responses.length)]);
     }
 });
