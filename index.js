@@ -83,8 +83,9 @@ client.on('messageCreate', async msg => {
 
 client.on('messageCreate', async msg => {
     if (msg.author.bot) return false;
-    if (Math.random() * 100 >= 10) return false;
+    if (Math.random() * 100 >= 20) return false;
     isNitro = msg.content.toLowerCase().match('nitro');
+    isHearts = msg.content.toLowerCase().match(':HEARTSONYOU:');
     isCoffee = msg.content.toLowerCase().match('nitro cold brew');
     nitro_responses = [
         "NQN - 10 Secrets That Discord Developers Don't Want You to Know...",
@@ -94,14 +95,14 @@ client.on('messageCreate', async msg => {
         "Once jewsie's nitro ends, she will lose part of her personality! ~ Kei",
         "reject nitro, return to bot"
     ];
-    if (isNitro && !isCoffee) {
+    if ((isNitro && !isCoffee) || (isHearts)) {
         return msg.reply(nitro_responses[Math.floor(Math.random() * nitro_responses.length)]);
     }
 });
 
 client.on('messageCreate', async msg => {
     if (msg.author.bot) return false;
-    if (Math.random() * 100 >= 10) return false;
+    if (Math.random() * 100 >= 20) return false;
     let regex = /(crime|guacamole|avocado)/;
     const isAvocado = regex.test(msg.content.toLowerCase());
     if (isAvocado) {
@@ -111,7 +112,7 @@ client.on('messageCreate', async msg => {
 
 client.on('messageCreate', async msg => {
     if (msg.author.bot) return false;
-    if (Math.random() * 100 >= 10) return false;
+    if (Math.random() * 100 >= 20) return false;
     let regex = /(steal| rob |stole|murder)/;
     const isSwiper = regex.test(msg.content.toLowerCase());
     if (isSwiper) {
@@ -121,9 +122,9 @@ client.on('messageCreate', async msg => {
 
 client.on('messageCreate', async msg => {
     if (msg.author.bot) return false;
-    if (Math.random() * 100 >= 10) return false;
+    if (Math.random() * 100 >= 20) return false;
 
-    let regex = /(poor|classism|rich|broke)/;
+    let regex = /(poor|classism|rich|broke|middle class)/;
 
     responses = [
         "overthrow the bourgeoisie",
@@ -141,7 +142,7 @@ client.login(token);
 
 client.on('messageCreate', async msg => {
     if (msg.author.bot) return false;
-    if (Math.random() * 100 >= 5) return false;
+    if (Math.random() * 100 >= 10) return false;
     let regex = /(conscience|overthinking)/;
     responses = [
         "conscience doth make a coward of us all",
