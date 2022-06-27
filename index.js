@@ -50,6 +50,8 @@ client.on('interactionCreate', async interaction => {
 
 // ------------------ events section --------------------------- //
 
+// TODO revamp with map to make this code CLEANER
+
 /* EXAMPLE FORMAT
 1. Copy the block of code & move it out of the comment
 ( the words should have colors like the nitro example :)
@@ -81,6 +83,44 @@ client.on('messageCreate', async msg => {
 });
 */
 
+const bot_map = new Map();
+
+bot_map.set(/(crime|guacamole|avocado|green|stole)/, ["The avocado cartel wants to know your location."]);
+bot_map.set(/(steal| rob |murder|death|dying)/, ["Swiper no swiping!"])
+bot_map.set(/(poor|classism|rich|broke|middle class|bank|money|dollars|cents)/, [
+    "overthrow the bourgeoisie",
+    "eat the rich",
+    "bernie 2024",
+    "my money don't jingle jingle, it folds",
+    "Chu Wanning snarled, “So what if you have money? Does money allow you to flip right and wrong, to repay kindness with cruelty? Does money let you do whatever you want, break all your promises?”"
+])
+bot_map.set(/(conscience|overthinking)/, ["conscience doth make a coward of us all"])
+bot_map.set(/(good morning|morning|goose)/, [
+    "This may be a morning, but who's to say it's good?",
+    "Good riddance",
+    "Is it actually morning though?"
+])
+bot_map.set(/(weird|strange)/, ["We all just hide the real weird until we meet our flavor of weird"])
+bot_map.set(/(pei ming|ho|daddy)/, [
+    "Jewsie is being annoying",
+    "Jewsie keeps bugging me but I'm waiting on her",
+    "How can I respond if there are no response optiosn!?",
+    "Look what you made me do"
+])
+bot_map.set(/(mu qing|xuan zhen|fu yao)/, ["Cherry boy"])
+bot_map.set(/(cool|exciting|awesome|peanuts|spies|spy|assassin|kill|world peace|bond man)/, [":sparkles: waku waku :sparkles:"])
+
+client.on('messageCreate', async msg => {
+    if (msg.author.bot) return false;
+    if (Math.random() * 100 >= 33) return false;
+    function replyToMessage(responses, regex) {
+        if (regex.test(msg.content.toLowerCase())) {
+            return msg.reply(responses[Math.floor(Math.random() * responses.length)]);
+        }
+    }
+    bot_map.forEach(replyToMessage);
+});
+
 client.on('messageCreate', async msg => {
     if (msg.author.bot) return false;
     if (Math.random() * 100 >= 50) return false;
@@ -102,89 +142,10 @@ client.on('messageCreate', async msg => {
 
 client.on('messageCreate', async msg => {
     if (msg.author.bot) return false;
-    if (Math.random() * 100 >= 50) return false;
-    let regex = /(crime|guacamole|avocado)/;
-    const isAvocado = regex.test(msg.content.toLowerCase());
-    if (isAvocado) {
-        return msg.reply("The avocado cartel wants to know your location.");
-    }
-});
-
-client.on('messageCreate', async msg => {
-    if (msg.author.bot) return false;
-    if (Math.random() * 100 >= 50) return false;
-    let regex = /(steal| rob |stole|murder)/;
-    const isSwiper = regex.test(msg.content.toLowerCase());
-    if (isSwiper) {
-        return msg.reply("Swiper no swiping!");
-    }
-});
-
-client.on('messageCreate', async msg => {
-    if (msg.author.bot) return false;
-    if (Math.random() * 100 >= 50) return false;
-
-    let regex = /(poor|classism|rich|broke|middle class|bank)/;
-
-    responses = [
-        "overthrow the bourgeoisie",
-        "eat the rich",
-        "bernie 2024",
-        "my money don't jingle jingle, it folds",
-        "Chu Wanning snarled, “So what if you have money? Does money allow you to flip right and wrong, to repay kindness with cruelty? Does money let you do whatever you want, break all your promises?”"
-    ];
-
-    if (regex.test(msg.content.toLowerCase())) {
-        return msg.reply(responses[Math.floor(Math.random() * responses.length)]);
-    }
-});
-
-client.on('messageCreate', async msg => {
-    if (msg.author.bot) return false;
-    if (Math.random() * 100 >= 50) return false;
-    let regex = /(conscience|overthinking)/;
-    responses = [
-        "conscience doth make a coward of us all",
-    ];
-    if (regex.test(msg.content.toLowerCase())) {
-        return msg.reply(responses[Math.floor(Math.random() * responses.length)]);
-    }
-});
-
-client.on('messageCreate', async msg => {
-    if (msg.author.bot) return false;
-    if (Math.random() * 100 >= 50) return false;
-    let regex = /(good morning|morning|goose)/;
-    responses = [
-        "This may be a morning, but who's to say it's good?",
-        "Good riddance",
-        "Is it actually morning though?"
-    ];
-    if (regex.test(msg.content.toLowerCase())) {
-        return msg.reply(responses[Math.floor(Math.random() * responses.length)]);
-    }
-});
-
-client.on('messageCreate', async msg => {
-    if (msg.author.bot) return false;
-    if (Math.random() * 100 >= 50) return false;
-    let regex = /(weird|strange)/;
-    responses = [
-        "We all just hide the real weird until we meet our flavor of weird",
-
-    ];
-    if (regex.test(msg.content.toLowerCase())) {
-        return msg.reply(responses[Math.floor(Math.random() * responses.length)]);
-    }
-});
-
-client.on('messageCreate', async msg => {
-    if (msg.author.bot) return false;
-    if (Math.random() * 100 >= 50) return false;
-    let regex = /^I\'m ([a-zA-Z]+)$/;
+    if (Math.random() * 100 >= 20) return false;
+    let regex = /^i\'m ([a-zA-Z]+)$|^im ([a-zA-Z]+)$|^i am ([a-zA-Z]+)$/;
     response = "Hi [TK], I'm the brainrot bot.";
-    if (regex.test(msg.content)) {
-        if (msg.content.match(regex).length < 2) return;
+    if (regex.test(msg.content.toLowerCase())) {
         return msg.reply(response.replace("[TK]", msg.content.match(regex)[1]));
     }
 });

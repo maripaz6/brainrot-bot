@@ -2,7 +2,8 @@ const { SlashCommandBuilder } = require('@discordjs/builders');
 
 const dares = [
     "A small spoon full of coffee powder, in the maw, and gulp. Wash it with a shotglass of water ALONE",
-    "Feet pic go"
+    "Feet pic go",
+    "Go up to a random person and say 'hi'"
 ]
 
 module.exports = {
