@@ -83,7 +83,7 @@ client.on('messageCreate', async msg => {
 
 client.on('messageCreate', async msg => {
     if (msg.author.bot) return false;
-    if (Math.random() * 100 >= 20) return false;
+    if (Math.random() * 100 >= 50) return false;
     isNitro = msg.content.toLowerCase().match('nitro');
     isHearts = msg.content.toLowerCase().match(':HEARTSONYOU:');
     isCoffee = msg.content.toLowerCase().match('nitro cold brew');
@@ -102,7 +102,7 @@ client.on('messageCreate', async msg => {
 
 client.on('messageCreate', async msg => {
     if (msg.author.bot) return false;
-    if (Math.random() * 100 >= 20) return false;
+    if (Math.random() * 100 >= 50) return false;
     let regex = /(crime|guacamole|avocado)/;
     const isAvocado = regex.test(msg.content.toLowerCase());
     if (isAvocado) {
@@ -112,7 +112,7 @@ client.on('messageCreate', async msg => {
 
 client.on('messageCreate', async msg => {
     if (msg.author.bot) return false;
-    if (Math.random() * 100 >= 20) return false;
+    if (Math.random() * 100 >= 50) return false;
     let regex = /(steal| rob |stole|murder)/;
     const isSwiper = regex.test(msg.content.toLowerCase());
     if (isSwiper) {
@@ -122,7 +122,7 @@ client.on('messageCreate', async msg => {
 
 client.on('messageCreate', async msg => {
     if (msg.author.bot) return false;
-    if (Math.random() * 100 >= 20) return false;
+    if (Math.random() * 100 >= 50) return false;
 
     let regex = /(poor|classism|rich|broke|middle class)/;
 
@@ -130,7 +130,8 @@ client.on('messageCreate', async msg => {
         "overthrow the bourgeoisie",
         "eat the rich",
         "bernie 2024",
-        "my money don't jingle jingle, it folds"
+        "my money don't jingle jingle, it folds",
+        "Chu Wanning snarled, “So what if you have money? Does money allow you to flip right and wrong, to repay kindness with cruelty? Does money let you do whatever you want, break all your promises?”"
     ];
 
     if (regex.test(msg.content.toLowerCase())) {
@@ -138,11 +139,9 @@ client.on('messageCreate', async msg => {
     }
 });
 
-client.login(token);
-
 client.on('messageCreate', async msg => {
     if (msg.author.bot) return false;
-    if (Math.random() * 100 >= 10) return false;
+    if (Math.random() * 100 >= 50) return false;
     let regex = /(conscience|overthinking)/;
     responses = [
         "conscience doth make a coward of us all",
@@ -152,3 +151,18 @@ client.on('messageCreate', async msg => {
     }
 });
 
+client.on('messageCreate', async msg => {
+    if (msg.author.bot) return false;
+    if (Math.random() * 100 >= 50) return false;
+    let regex = /(good morning|morning|goose)/;
+    responses = [
+        "This may be a morning, but who's to say it's good?",
+        "Good riddance",
+        "Is it actually morning though?"
+    ];
+    if (regex.test(msg.content.toLowerCase())) {
+        return msg.reply(responses[Math.floor(Math.random() * responses.length)]);
+    }
+});
+
+client.login(token);

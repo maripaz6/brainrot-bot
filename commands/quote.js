@@ -53,6 +53,7 @@ const quotes = [
     "I pray to never rest in peace.",
     "Remember: when humans ascend, they are still human; when they fall, they are still human",
     "I don't know if you all missed me, but I haven't thought about any of you at all.",
+    "Standing there in the rain, under the haitang blossoms dancing atop the barrier, he looked at Mo Ran for the first time, thoroughly and carefully, looked at this man who was promising him a lifetime.",
     "I might not be able to decide whether the road is easy or not, but whether I walk it is entirely up to me",
 
 ];
