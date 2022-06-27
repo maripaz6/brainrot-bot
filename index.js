@@ -124,7 +124,7 @@ client.on('messageCreate', async msg => {
     if (msg.author.bot) return false;
     if (Math.random() * 100 >= 50) return false;
 
-    let regex = /(poor|classism|rich|broke|middle class)/;
+    let regex = /(poor|classism|rich|broke|middle class|bank)/;
 
     responses = [
         "overthrow the bourgeoisie",
@@ -159,6 +159,19 @@ client.on('messageCreate', async msg => {
         "This may be a morning, but who's to say it's good?",
         "Good riddance",
         "Is it actually morning though?"
+    ];
+    if (regex.test(msg.content.toLowerCase())) {
+        return msg.reply(responses[Math.floor(Math.random() * responses.length)]);
+    }
+});
+
+client.on('messageCreate', async msg => {
+    if (msg.author.bot) return false;
+    if (Math.random() * 100 >= 50) return false;
+    let regex = /(weird|strange)/;
+    responses = [
+        "We all just hide the real weird until we meet our flavor of weird",
+
     ];
     if (regex.test(msg.content.toLowerCase())) {
         return msg.reply(responses[Math.floor(Math.random() * responses.length)]);
