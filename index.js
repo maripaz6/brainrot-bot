@@ -178,4 +178,15 @@ client.on('messageCreate', async msg => {
     }
 });
 
+client.on('messageCreate', async msg => {
+    if (msg.author.bot) return false;
+    if (Math.random() * 100 >= 50) return false;
+    let regex = /^I\'m ([a-zA-Z]+)$/;
+    response = "Hi [TK], I'm the brainrot bot.";
+    if (regex.test(msg.content)) {
+        if (msg.content.match(regex).length < 2) return;
+        return msg.reply(response.replace("[TK]", msg.content.match(regex)[1]));
+    }
+});
+
 client.login(token);
