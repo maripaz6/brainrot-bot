@@ -55,7 +55,26 @@ const quotes = [
     "I don't know if you all missed me, but I haven't thought about any of you at all.",
     "Standing there in the rain, under the haitang blossoms dancing atop the barrier, he looked at Mo Ran for the first time, thoroughly and carefully, looked at this man who was promising him a lifetime.",
     "I might not be able to decide whether the road is easy or not, but whether I walk it is entirely up to me",
-
+    "But what he hadn't expected was that when everyone feared him and flattered him, Lan WangJi scolded him right in his face; when everyone spurned him and loathed him, Lan WangJi stood by his side",
+    "Who cares about the crowded, broad road? I'll walk the single-plank bridge into the night…",
+    "Suddenly, he felt that the world had no place for him, despite how large it was.",
+    "I used to think of you as my soulmate. / I still am.",
+    "Hatred could blind a person's eyes, making him unable to admit anything in favor of his enemy.",
+    "How is it that you are real? My dreams never created something like you. I still have to pinch myself, because I'm amazed you are true.",
+    "For a promise, I once gave up my sword for a flute.",
+    "Xiao XingChen, the bright moon, the gentle breeze; Song ZiChen, the distant snow, the bitter frost",
+    "Who cares about the crowded broad street, I'll walk on my single plank bridge till it's dark.",
+    "Rebellion against orthodoxy? What kind of orthodoxy is that? Lan Zhan, do you still remember the promise we have made together? Throughout this life, I wished I could eliminate all traitors, and support the weak against the strong. But tell me now, who's stronger and weaker, who's right and who's wrong. Is this the promise that we pledged our lives to keep?",
+    "Even though the world was large, how many people could say, you need not to become strong; I am here, of course I will not let others harm you?",
+    "Stupid author stupid novel!",
+    "You probably won't be truly happy until you're a geezer - Iwaizumi",
+    "You really are a piece of crap - Iwaizumi",
+    "Could you stop calling me a crappy guy'? - Oikawa",
+    "'Straightforward and pure' coming from you is already impure - Iwaizumi",
+    "Iwa-chan, are you my mom? - Oikawa",
+    "What are you thinking? You won't get your way! - Hinata",
+    "Japan! - Hinata",
+    "Hey! There's nowhere to run! - Daichi",
 ];
 
 module.exports = {

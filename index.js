@@ -62,24 +62,23 @@ bot_map.set(/(poor|classism|rich|broke|middle class|bank|money|dollars|cents)/, 
     "Chu Wanning snarled, “So what if you have money? Does money allow you to flip right and wrong, to repay kindness with cruelty? Does money let you do whatever you want, break all your promises?”"
 ])
 bot_map.set(/(conscience|overthinking)/, ["conscience doth make a coward of us all"])
-bot_map.set(/(good morning|morning|goose)/, [
+bot_map.set(/(good morning|goose)/, [
     "This may be a morning, but who's to say it's good?",
     "Good riddance",
     "Is it actually morning though?"
 ])
+bot_map.set(/(fengqing)/, "Right in front of my salad.")
+bot_map.set(/(hualien)/, "I’m the captain of that ship.")
 bot_map.set(/(weird|strange)/, ["We all just hide the real weird until we meet our flavor of weird"])
-bot_map.set(/(pei ming|ho|daddy)/, [
-    "Jewsie is being annoying",
-    "Jewsie keeps bugging me but I'm waiting on her",
-    "How can I respond if there are no response optiosn!?",
-    "Look what you made me do"
-])
 bot_map.set(/(mu qing|xuan zhen|fu yao)/, ["Cherry boy"])
+bot_map.set(/(marriage|divorce)/, ["Pei Ming: Why not just join my harem, my dear?"])
+bot_map.set(/(daddy| ho )/, ["Hoho. *wink*"])
+bot_map.set(/(pei minggeneral pei)/, ["At your service, my dear."])
 bot_map.set(/(cool|exciting|awesome|peanuts|spies|spy|assassin|kill|world peace|bond man)/, [":sparkles: waku waku :sparkles:"])
 
 client.on('messageCreate', async msg => {
     if (msg.author.bot) return false;
-    if (Math.random() * 100 >= 33) return false;
+    if (Math.random() * 100 >= 10) return false;
     function replyToMessage(responses, regex) {
         if (regex.test(msg.content.toLowerCase())) {
             return msg.reply(responses[Math.floor(Math.random() * responses.length)]);
