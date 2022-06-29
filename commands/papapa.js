@@ -9,6 +9,10 @@ Good evening ladies. I was ...ahem busy...You know what? Pei Ming never comes to
 */
 
 const advice = [
+    "My cock is canon.",
+    "*cries in harem*",
+    "Huh, how do you know? Did I fuck you by accident? ",
+    "Good evening ladies. I was ...ahem busy...You know what? Pei Ming never comes too early.",
     "This one is for you Hua Chengzu, because it is called 'The Butterfly Flick': While bobbing on the head of his penis, twist your hands on the shaft of the penis and swirl your tongue around the corona(the ridge separating the shaft from the head, in case you don't know...). Then, lightly flick your tongue (hence the butterfly) back and forth across his delicate corona.",
     "So about todays sex tip... Surprisingly, today's advice is more for the receiving ends:(where are they by the way?) 'Tell him exactly WHAT you want, and WHEN you want it.' Just because that's frickin hot",
     "Go up the wall: give him a hot, wet kiss, rub your body against his and say, 'How about right here?'",
@@ -61,7 +65,7 @@ const advice = [
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('papapa')
-        .setDescription('The Great Pei Ming Has Advice...'),
+        .setDescription('The Great Pei Ming Has Something To Say...'),
     async execute(interaction) {
         if (interaction.channel.parentId === '983420971765628929') {
             await interaction.reply(advice[Math.floor(Math.random() * advice.length)]);
