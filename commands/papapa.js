@@ -60,10 +60,10 @@ const advice = [
 
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName('dare')
-        .setDescription('Thinking of something stupid...'),
+        .setName('papapa')
+        .setDescription('The Great Pei Ming Has Advice...'),
     async execute(interaction) {
-        if (msg.channel.category.id === '983420971765628929') {
+        if (interaction.channel.parentId === '983420971765628929') {
             await interaction.reply(advice[Math.floor(Math.random() * advice.length)]);
         } else {
             await interaction.reply("These are Secrets Men Aren't Meant to Know.");
